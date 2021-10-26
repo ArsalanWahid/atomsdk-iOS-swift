@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AtomSDK
+import AtomCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let atomConfiguration = AtomConfiguration();
+        atomConfiguration.secretKey = Constants.credentials.secretKey
+        atomConfiguration.vpnInterfaceName = "ATOMSDKSAMPLE"
+        AtomManager.sharedInstance(with: atomConfiguration)
+        
+        AtomManager.sharedInstance()?.installVPNProfile(completion: { (success) in print("Profile installed")}, errorBlock: {(Error) in print(Error.debugDescription)})
+        
         return true
     }
 
@@ -31,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func applicationWillTerminate(_ application: UIApplication) {
+        AtomManager.sharedInstance()?.disconnectVPN()
+    }
 
 }
 

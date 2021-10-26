@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197CC92F29F131ACA767315B /* Pods_atom_sdk_ios_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBF50F52472D1ED682998E9 /* Pods_atom_sdk_ios_swift.framework */; };
 		D720EA792726CCF1001DB324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720EA782726CCF1001DB324 /* AppDelegate.swift */; };
 		D720EA7B2726CCF1001DB324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720EA7A2726CCF1001DB324 /* SceneDelegate.swift */; };
 		D720EA7D2726CCF1001DB324 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720EA7C2726CCF1001DB324 /* ViewController.swift */; };
 		D720EA802726CCF1001DB324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D720EA7E2726CCF1001DB324 /* Main.storyboard */; };
 		D720EA822726CCF3001DB324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D720EA812726CCF3001DB324 /* Assets.xcassets */; };
 		D720EA852726CCF3001DB324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D720EA832726CCF3001DB324 /* LaunchScreen.storyboard */; };
+		D720EA8D2726CDD5001DB324 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720EA8C2726CDD5001DB324 /* Constants.swift */; };
+		D720EA902726CF47001DB324 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720EA8F2726CF47001DB324 /* NetworkExtension.framework */; };
+		D7778D7A2726F264002A8B1F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7778D792726F264002A8B1F /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F67EE929FE0141D1B04C441 /* Pods-atom-sdk-ios-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atom-sdk-ios-swift.release.xcconfig"; path = "Target Support Files/Pods-atom-sdk-ios-swift/Pods-atom-sdk-ios-swift.release.xcconfig"; sourceTree = "<group>"; };
+		ABBF50F52472D1ED682998E9 /* Pods_atom_sdk_ios_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atom_sdk_ios_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D720EA752726CCF1001DB324 /* atom-sdk-ios-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atom-sdk-ios-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D720EA782726CCF1001DB324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D720EA7A2726CCF1001DB324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,11 @@
 		D720EA812726CCF3001DB324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D720EA842726CCF3001DB324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D720EA862726CCF3001DB324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D720EA8C2726CDD5001DB324 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D720EA8E2726CF47001DB324 /* atom-sdk-ios-swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "atom-sdk-ios-swift.entitlements"; sourceTree = "<group>"; };
+		D720EA8F2726CF47001DB324 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		D7778D792726F264002A8B1F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F7E834FDBCF9B315BB3B1661 /* Pods-atom-sdk-ios-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atom-sdk-ios-swift.debug.xcconfig"; path = "Target Support Files/Pods-atom-sdk-ios-swift/Pods-atom-sdk-ios-swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +42,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7778D7A2726F264002A8B1F /* MobileCoreServices.framework in Frameworks */,
+				197CC92F29F131ACA767315B /* Pods_atom_sdk_ios_swift.framework in Frameworks */,
+				D720EA902726CF47001DB324 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEBB9914247339A031512629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7778D792726F264002A8B1F /* MobileCoreServices.framework */,
+				D720EA8F2726CF47001DB324 /* NetworkExtension.framework */,
+				ABBF50F52472D1ED682998E9 /* Pods_atom_sdk_ios_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D720EA6C2726CCF1001DB324 = {
 			isa = PBXGroup;
 			children = (
 				D720EA772726CCF1001DB324 /* atom-sdk-ios-swift */,
 				D720EA762726CCF1001DB324 /* Products */,
+				DA884730EE367A8EC166F3CF /* Pods */,
+				CEBB9914247339A031512629 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +82,9 @@
 		D720EA772726CCF1001DB324 /* atom-sdk-ios-swift */ = {
 			isa = PBXGroup;
 			children = (
+				D720EA8E2726CF47001DB324 /* atom-sdk-ios-swift.entitlements */,
 				D720EA782726CCF1001DB324 /* AppDelegate.swift */,
+				D720EA8C2726CDD5001DB324 /* Constants.swift */,
 				D720EA7A2726CCF1001DB324 /* SceneDelegate.swift */,
 				D720EA7C2726CCF1001DB324 /* ViewController.swift */,
 				D720EA7E2726CCF1001DB324 /* Main.storyboard */,
@@ -67,6 +95,15 @@
 			path = "atom-sdk-ios-swift";
 			sourceTree = "<group>";
 		};
+		DA884730EE367A8EC166F3CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7E834FDBCF9B315BB3B1661 /* Pods-atom-sdk-ios-swift.debug.xcconfig */,
+				4F67EE929FE0141D1B04C441 /* Pods-atom-sdk-ios-swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D720EA892726CCF3001DB324 /* Build configuration list for PBXNativeTarget "atom-sdk-ios-swift" */;
 			buildPhases = (
+				69B79D1348CFBA25629DC23D /* [CP] Check Pods Manifest.lock */,
 				D720EA712726CCF1001DB324 /* Sources */,
 				D720EA722726CCF1001DB324 /* Frameworks */,
 				D720EA732726CCF1001DB324 /* Resources */,
+				09903BA388D40A00C375D35E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +172,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09903BA388D40A00C375D35E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atom-sdk-ios-swift/Pods-atom-sdk-ios-swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atom-sdk-ios-swift/Pods-atom-sdk-ios-swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atom-sdk-ios-swift/Pods-atom-sdk-ios-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69B79D1348CFBA25629DC23D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-atom-sdk-ios-swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D720EA712726CCF1001DB324 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +222,7 @@
 				D720EA7D2726CCF1001DB324 /* ViewController.swift in Sources */,
 				D720EA792726CCF1001DB324 /* AppDelegate.swift in Sources */,
 				D720EA7B2726CCF1001DB324 /* SceneDelegate.swift in Sources */,
+				D720EA8D2726CDD5001DB324 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +366,11 @@
 		};
 		D720EA8A2726CCF3001DB324 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E834FDBCF9B315BB3B1661 /* Pods-atom-sdk-ios-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "atom-sdk-ios-swift/atom-sdk-ios-swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWH34NK772;
@@ -302,7 +386,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.goc.itretina.atom-sdk-ios-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goc.itretina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,9 +396,11 @@
 		};
 		D720EA8B2726CCF3001DB324 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F67EE929FE0141D1B04C441 /* Pods-atom-sdk-ios-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "atom-sdk-ios-swift/atom-sdk-ios-swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWH34NK772;
@@ -330,7 +416,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.goc.itretina.atom-sdk-ios-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goc.itretina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
